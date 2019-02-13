@@ -16,3 +16,28 @@
 .navbar-brand {
 	background-color: #e0e0e0;
 }
+
+.sidenav {
+  height: auto;
+  width: 210px;
+  position: fixed;
+  z-index: 1;
+  top: 68px;
+  left: 0;
+  background-color: darkblue;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #fff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: blue;
+  background-color: #e0e0e0;
+}
