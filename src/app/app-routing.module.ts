@@ -7,7 +7,7 @@ const routes: Routes = [
 
 	{ path: '', component: LoginComponent },
 	{ path: 'dashboard', component: DashboardComponent },
-	{ path: 'logout', component: LogoutComponent}
+	{ path: 'dashboard/logout', component: LogoutComponent}
 ];
 
 @NgModule({

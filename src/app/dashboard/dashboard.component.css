@@ -41,3 +41,15 @@
   color: blue;
   background-color: #e0e0e0;
 }
+.row {
+	padding-left: 18%;
+	background-color: #fff;
+}
+
+hr {
+	border: 1px solid #fff;
+}
+.container{
+	/* background-color: #fff;
+	padding-left: 18%; */
+}
