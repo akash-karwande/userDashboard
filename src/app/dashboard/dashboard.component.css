@@ -1,0 +1,18 @@
+.setting {
+	width: 100%;
+	text-align: right;
+}
+
+.panel {
+	width: 100%;
+	text-align: end;
+	color: #fff;
+}
+
+.fa.fa-cog.fa-2x {
+	color: #fff;
+}
+
+.navbar-brand {
+	background-color: #e0e0e0;
+}
