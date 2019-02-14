@@ -11,6 +11,7 @@
 
 .fa.fa-cog.fa-2x {
 	color: #fff;
+	cursor: pointer;
 }
 
 .navbar-brand {
@@ -40,16 +41,59 @@
 .sidenav a:hover {
   color: blue;
   background-color: #e0e0e0;
-}
-.row {
-	padding-left: 18%;
-	background-color: #fff;
+  cursor: pointer;
 }
 
 hr {
 	border: 1px solid #fff;
 }
-.container{
-	/* background-color: #fff;
-	padding-left: 18%; */
+.container-fluid {
+	background-color: #fff;
+	border-left: 210px solid blue;
+	height: 700px;
+	position: fixed;
+	padding-top: 150px;
+}
+
+app-dashboard {
+	background-color: #fff;
+}
+.row.one {
+	width: 100%;
+}
+.fa.fa-plus-square {
+	color: blue;
+	border: 2px solid blue;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.grid-input {
+	border: 2px solid black;
+}
+.pull-right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+input::placeholder {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.row.two {
+	height: 23px;
+	background-color: lightgreen;
+	width: 100%;
+	margin: 0;
+}
+
+#buttn {
+	width: 30%;
+	cursor: pointer;
 }

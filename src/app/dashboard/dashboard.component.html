@@ -12,20 +12,54 @@
 	  <a>File Upload</a>
 	  <a>Alias</a>
 	  <a>Custom Protocols</a><hr>
-	  <a routerLink="logout"><i class="fa fa-power-off">  Logout</i></a>
+	  <a (click)="open(content)"><i class="fa fa-power-off">  Logout</i></a>
 
 	</div>
 	<div class="container-fluid">
-	<div class="row">
+	<div class="row one">
 		<div class="col-md-4">
-			<i class="fa fa-plus-square">Add More Rule</i>
+			<i class="fa fa-plus-square"> Add More Rule</i>
 		</div>
-		<div class="col-md-4">
-			<p>All Columns Mandatory</p>
+		<div class="col-md-4 center">
+			<p class="red">All Columns Mandatory</p>
 		</div>
-		<div class="col-md-4">
-			<input type="text" placeholder="Search Grid">
+		<div class="col-md-4 pull-right">
+			<input class="grid-input" type="text" placeholder="Search Grid">
+		</div>
+	</div>
+	<div class="row two">
+		<div class="col-md-2">
+			<p>Sr.No.</p>
+		</div>
+		<div class="col-md-2">
+			<p>Protocol</p>
+		</div>
+		<div class="col-md-2">
+			<p>Source Ip</p>
+		</div>
+		<div class="col-md-2">
+			<p>Destination IP</p>
+		</div>
+		<div class="col-md-2">
+			<p>Access Type</p>
+		</div>
+		<div class="col-md-2">
+			<p>Action</p>
 		</div>
 	</div>
 	</div>
 </div>
+
+
+ <ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-body">
+  	<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p>Are you sure want to logout ?</p>
+  </div>
+  <div class="modal-footer">
+    <button routerLink="logout" type="button" id="buttn" class="btn btn-primary" (click)="c('Save click')">Logout</button>
+    <button type="button" id="buttn" class="btn btn-danger" (click)="c('Save click')">Cancel</button>
+  </div>
+</ng-template>
