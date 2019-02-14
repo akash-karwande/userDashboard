@@ -1,14 +1,14 @@
 <div class="container col-md-4 col-sm-12 col-xs-12">
 		<h2>Nubewell<br/>Networks</h2>
-	<form>
+	<form [formGroup]="loginForm" novalidate>
 		<div class="form-group">
-			<input class="form-control" type="text" placeholder="username/email">
+			<input formControlName ="email" class="form-control" type="text" [(ngModel)]="email" placeholder="username/email">
 		</div>
 		<div class="form-group">
-			<input class="form-control" type="password" placeholder="password">
+			<input formControlName ="password" [ngModel]="password" class="form-control" type="password" placeholder="password">
 		</div>
 		<div class="form-group">
-			<button routerLink="dashboard" class="btn btn-primary" type="button">Login</button>
+			<button [disabled]="!loginForm.valid" routerLink="dashboard" class="btn btn-primary" type="button">Login</button>
 		</div>
 	</form>
 </div>

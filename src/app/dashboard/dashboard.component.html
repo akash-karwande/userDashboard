@@ -47,6 +47,37 @@
 			<p>Action</p>
 		</div>
 	</div>
+
+	<div class="row two2">
+		<div class="col-md-2">
+			<p>1</p>
+		</div>
+		<div class="col-md-2">
+			<select class="form-control">
+			  <option value="volvo">None</option>
+			  <option value="saab">IP</option>
+			  <option value="opel">TCP</option>
+			  <option value="audi">HTTP</option>
+			</select>
+		</div>
+		<div class="col-md-2">
+			<input class="form-control" type="text" placeholder="Enter Source IP">
+		</div>
+		<div class="col-md-2">
+			<input type="text" class="form-control" placeholder="Enter Destination IP">
+		</div>
+		<div class="col-md-2">
+			<select class="form-control">
+			  <option value="volvo">None</option>
+			  <option value="saab">Permit</option>
+			  <option value="opel">Denied</option>
+			  <option value="audi">All</option>
+			</select>
+		</div>
+		<div class="col-md-2">
+			<i class="fa fa-trash red"></i>
+		</div>
+	</div>
 	</div>
 </div>
 
@@ -59,7 +90,7 @@
     <p>Are you sure want to logout ?</p>
   </div>
   <div class="modal-footer">
-    <button routerLink="logout" type="button" id="buttn" class="btn btn-primary" (click)="c('Save click')">Logout</button>
+    <button routerLink="logout" type="button" id="buttn" class="btn btn-primary" (click)="c('Save click')">Ok</button>
     <button type="button" id="buttn" class="btn btn-danger" (click)="c('Save click')">Cancel</button>
   </div>
 </ng-template>

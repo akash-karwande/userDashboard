@@ -55,11 +55,12 @@ hr {
 	padding-top: 150px;
 }
 
-app-dashboard {
-	background-color: #fff;
-}
 .row.one {
 	width: 100%;
+}
+.row.two2 {
+	margin-top: 1%;
+	box-shadow: 0px 0px 3px 0px;
 }
 .fa.fa-plus-square {
 	color: blue;
@@ -96,4 +97,9 @@ input::placeholder {
 #buttn {
 	width: 30%;
 	cursor: pointer;
+}
+
+.fa.fa-trash.red {
+	cursor: pointer;
+	margin-left: 7%;
 }

@@ -25,4 +25,5 @@ h2 {
 
 .btn.btn-primary {
 	background-color: orange;
+	cursor: pointer;
 }
