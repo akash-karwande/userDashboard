@@ -53,5 +53,10 @@ export class DashboardComponent implements OnInit {
   	this.router.navigate(['dashboard'])
   }
 
+  onLogout() {
+  	this.modalRef.close();
+  	this.router.navigate(['logout']);
+  }
+
 
 }

@@ -12,7 +12,7 @@
 	  <a routerLink="upload">File Upload</a>
 	  <a>Alias</a>
 	  <a>Custom Protocols</a><hr>
-	  <a (click)="open(content)" (click)="onLogout()"><i class="fa fa-power-off">  Logout</i></a>
+	  <a (click)="open(content)"><i class="fa fa-power-off">  Logout</i></a>
 
 	</div>
 	<div class="container-fluid">
@@ -132,7 +132,7 @@
     <p>Are you sure want to logout ?</p>
   </div>
   <div class="modal-footer">
-    <button routerLink="logout" type="button" id="buttn" class="btn btn-primary" (click)="c('Save click')">Ok</button>
+    <button (click)="onLogout()" type="button" id="buttn" class="btn btn-primary">Ok</button>
     <button type="button" id="buttn" class="btn btn-danger" (click)="c('Save click')">Cancel</button>
   </div>
 </ng-template>
