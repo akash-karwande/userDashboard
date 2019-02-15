@@ -46,6 +46,10 @@ nav {
   cursor: pointer;
 }
 
+.page-link:hover {
+	background-color: blue;
+}
+
 hr {
 	border: 1px solid #fff;
 }
@@ -114,4 +118,12 @@ form {
 .green {
 	color: green;
 	cursor: pointer;
+}
+
+.page {
+	position: fixed;
+	bottom: 5%;
+	left: 80%;
+	cursor: pointer;
+
 }

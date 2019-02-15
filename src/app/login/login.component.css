@@ -3,7 +3,7 @@
 	background-color: #fff;
 	padding: 5%;
 	position: fixed;
-	top: 25%;
+	top: 20%;
 	left: 33%;
 	border-radius: 15%;
 }
@@ -21,6 +21,10 @@ input::placeholder {
 h2 {
 	font-size: 40px;
 	color: lightblue;
+}
+.red {
+	color: red;
+	font-size: 13px;
 }
 
 .btn.btn-primary {

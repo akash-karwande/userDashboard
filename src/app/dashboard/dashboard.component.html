@@ -80,10 +80,49 @@
 		</div>
 	</form>
 	</div>
-	<p>{{dashboardForm.value | json}}</p>
+	<div class="row two2">
+		<form [formGroup]="dashboardForm">
+		<div class="col-md-2">
+			<input class="form-control" placeholder="{{dashboardForm.value.id}}" type="number" formControlName="id"/>
+		</div>
+		<div class="col-md-2">
+			<select class="form-control" formControlName="protocol">
+			  <option value="" selected>{{dashboardForm.value.protocol}}</option>
+			</select>
+		</div>
+		<div class="col-md-2">
+			<input class="form-control" type="text" placeholder="{{dashboardForm.value.sourceIP}}" formControlName="sourceIP">
+		</div>
+		<div class="col-md-2">
+			<input type="text" class="form-control" placeholder="{{dashboardForm.value.destinationIP}}" formControlName="destinationIP">
+		</div>
+		<div class="col-md-2">
+			<select class="form-control" formControlName="accessType">
+			  <option value="" disabled selected>{{dashboardForm.value.accessType}}</option>
+			</select>
+		</div>
+		<div class="col-md-2">
+			<i (click)="getForm()" class="green">Add</i><i (click)="onDelete()" class="fa fa-trash red"></i>
+		</div>
+	</form>
 	</div>
 </div>
 
+
+
+<nav class="page">
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+      <a class="page-link" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item active"><a class="page-link">1</a></li>
+    <li class="page-item"><a class="page-link">2</a></li>
+    <li class="page-item"><a class="page-link">3</a></li>
+    <li class="page-item">
+      <a class="page-link">Next</a>
+    </li>
+  </ul>
+</nav>
 
  <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-body">
@@ -93,7 +132,7 @@
     <p>Are you sure want to logout ?</p>
   </div>
   <div class="modal-footer">
-    <button routerLink="logout" type="button" id="buttn2" class="btn btn-primary" (click)="c('Save click')">Ok</button>
+    <button routerLink="logout" type="button" id="buttn" class="btn btn-primary" (click)="c('Save click')">Ok</button>
     <button type="button" id="buttn" class="btn btn-danger" (click)="c('Save click')">Cancel</button>
   </div>
 </ng-template>
