@@ -79,8 +79,8 @@
 			<i (click)="getForm()" class="green">Add</i><i (click)="onDelete()" class="fa fa-trash red"></i>
 		</div>
 	</form>
-	<!-- <p>{{dashboardForm.value | json}}</p> -->
 	</div>
+	<p>{{dashboardForm.value | json}}</p>
 	</div>
 </div>
 
@@ -93,7 +93,7 @@
     <p>Are you sure want to logout ?</p>
   </div>
   <div class="modal-footer">
-    <button routerLink="logout" type="button" id="buttn" class="btn btn-primary" (click)="c('Save click')">Ok</button>
+    <button routerLink="logout" type="button" id="buttn2" class="btn btn-primary" (click)="c('Save click')">Ok</button>
     <button type="button" id="buttn" class="btn btn-danger" (click)="c('Save click')">Cancel</button>
   </div>
 </ng-template>

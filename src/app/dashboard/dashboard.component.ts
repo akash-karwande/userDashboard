@@ -12,17 +12,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DashboardComponent implements OnInit {
 	private modalRef;
 	dashboardForm:FormGroup;
-  constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fb:FormBuilder) {
-  	config.backdrop = 'static';
-    config.keyboard = false;
-  }
+  constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fb:FormBuilder) {}
 
   ngOnInit() {
 
   	this.dashboardForm = this.fb.group({
             protocol: ['', Validators.compose([Validators.required])],
             sourceIP: ['', Validators.compose([Validators.required, Validators.pattern('\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b')])],
-            destinationIP: ['90898', Validators.compose([Validators.required, Validators.pattern('\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b')])],
+            destinationIP: ['', Validators.compose([Validators.required, Validators.pattern('\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b')])],
             accessType: ['', Validators.compose([Validators.required])],
             id: ['', Validators.compose([Validators.required])]
   });
@@ -34,12 +31,13 @@ export class DashboardComponent implements OnInit {
     this.modalRef = this.modalService.open(content);
     setTimeout(() => {
     		this.modalRef.close();
-    		this.router.navigate(['']);
+    		this.router.navigate(['logout']);
     		localStorage.clear();
 
     	},2*60*1000);
     
-  }
+  
+}
 
   getForm() {
   	localStorage.setItem('data',JSON.stringify(this.dashboardForm.value));
@@ -50,4 +48,10 @@ export class DashboardComponent implements OnInit {
   onDelete() {
   	localStorage.removeItem('data');
   }
+
+  onCancel() {
+  	this.router.navigate(['dashboard'])
+  }
+
+
 }
