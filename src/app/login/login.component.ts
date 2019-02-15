@@ -20,5 +20,9 @@ export class LoginComponent implements OnInit {
 
   }
 
+  onLogin() {
+  	localStorage.setItem('userInfo', JSON.stringify(this.loginForm.value));
+  }
+
 
 }

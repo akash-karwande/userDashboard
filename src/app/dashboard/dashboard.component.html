@@ -1,10 +1,10 @@
 <div class="wrapper">
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top col-sm-12 col-xs-12">
 	  <a class="navbar-brand">Nubewell Networks</a>
 	  <h1 class="panel">Admin Panel</h1>
 	  <a class="setting"><i class="fa fa-cog fa-2x"></i></a>
 	</nav>
-	<div class="sidenav">
+	<div class="sidenav col-sm-3 col-xs-2">
 	  <a>Dashboard</a>
 	  <a>Interface</a>
 	  <a>Settings</a>
@@ -12,7 +12,7 @@
 	  <a>File Upload</a>
 	  <a>Alias</a>
 	  <a>Custom Protocols</a><hr>
-	  <a (click)="open(content)"><i class="fa fa-power-off">  Logout</i></a>
+	  <a (click)="open(content)" (click)="onLogout()"><i class="fa fa-power-off">  Logout</i></a>
 
 	</div>
 	<div class="container-fluid">
@@ -49,34 +49,37 @@
 	</div>
 
 	<div class="row two2">
+		<form [formGroup]="dashboardForm">
 		<div class="col-md-2">
-			<p>1</p>
+			<input class="form-control" placeholder="1" type="number" formControlName="id"/>
 		</div>
 		<div class="col-md-2">
-			<select class="form-control">
-			  <option value="volvo">None</option>
-			  <option value="saab">IP</option>
-			  <option value="opel">TCP</option>
-			  <option value="audi">HTTP</option>
+			<select class="form-control" formControlName="protocol">
+			  <option value="" disabled selected>None</option>
+			  <option value="IP">IP</option>
+			  <option value="TCP">TCP</option>
+			  <option value="HTTP">HTTP</option>
 			</select>
 		</div>
 		<div class="col-md-2">
-			<input class="form-control" type="text" placeholder="Enter Source IP">
+			<input class="form-control" type="text" placeholder="Enter Source IP" formControlName="sourceIP">
 		</div>
 		<div class="col-md-2">
-			<input type="text" class="form-control" placeholder="Enter Destination IP">
+			<input type="text" class="form-control" placeholder="Enter Destination IP" formControlName="destinationIP">
 		</div>
 		<div class="col-md-2">
-			<select class="form-control">
-			  <option value="volvo">None</option>
-			  <option value="saab">Permit</option>
-			  <option value="opel">Denied</option>
-			  <option value="audi">All</option>
+			<select class="form-control" formControlName="accessType">
+			  <option value="" disabled selected>None</option>
+			  <option value="Permit">Permit</option>
+			  <option value="Denied">Denied</option>
+			  <option value="All">All</option>
 			</select>
 		</div>
 		<div class="col-md-2">
-			<i class="fa fa-trash red"></i>
+			<i (click)="getForm()" class="green">Add</i><i (click)="onDelete()" class="fa fa-trash red"></i>
 		</div>
+	</form>
+	<!-- <p>{{dashboardForm.value | json}}</p> -->
 	</div>
 	</div>
 </div>

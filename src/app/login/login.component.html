@@ -1,6 +1,6 @@
 <div class="container col-md-4 col-sm-12 col-xs-12">
 		<h2>Nubewell<br/>Networks</h2>
-	<form [formGroup]="loginForm" novalidate>
+	<form [formGroup]="loginForm">
 		<div class="form-group">
 			<input formControlName ="email" class="form-control" type="text" [(ngModel)]="email" placeholder="username/email">
 		</div>
@@ -8,7 +8,7 @@
 			<input formControlName ="password" [ngModel]="password" class="form-control" type="password" placeholder="password">
 		</div>
 		<div class="form-group">
-			<button [disabled]="!loginForm.valid" routerLink="dashboard" class="btn btn-primary" type="button">Login</button>
+			<button (click)="onLogin()" [disabled]="!loginForm.valid" routerLink="dashboard" class="btn btn-primary" type="button">Login</button>
 		</div>
 	</form>
 </div>

@@ -2,7 +2,9 @@
 	width: 100%;
 	text-align: right;
 }
-
+nav {
+	height: 68px;
+}
 .panel {
 	width: 100%;
 	text-align: end;
@@ -102,4 +104,14 @@ input::placeholder {
 .fa.fa-trash.red {
 	cursor: pointer;
 	margin-left: 7%;
+}
+
+form {
+	display: -webkit-inline-box;
+	width: 100%;
+}
+
+.green {
+	color: green;
+	cursor: pointer;
 }
