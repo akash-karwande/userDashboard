@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UploadComponent } from './upload/upload.component';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UploadComponent } from './upload/upload.component';
     LoginComponent,
     LogoutComponent,
     DashboardComponent,
-    UploadComponent
+    UploadComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,

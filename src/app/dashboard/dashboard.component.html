@@ -18,7 +18,7 @@
 	<div class="container-fluid">
 	<div class="row one">
 		<div class="col-md-4">
-			<i class="fa fa-plus-square"> Add More Rule</i>
+			<i class="fa fa-plus-square" routerLink="rules"> Add More Rule</i>
 		</div>
 		<div class="col-md-4 center">
 			<p class="red">All Columns Mandatory</p>
@@ -63,9 +63,13 @@
 		</div>
 		<div class="col-md-2">
 			<input class="form-control" type="text" placeholder="Enter Source IP" formControlName="sourceIP">
+				<div *ngIf="dashboardForm.controls['sourceIP'].errors && !dashboardForm.controls['sourceIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
+		        </div>
 		</div>
 		<div class="col-md-2">
 			<input type="text" class="form-control" placeholder="Enter Destination IP" formControlName="destinationIP">
+				<div *ngIf="dashboardForm.controls['destinationIP'].errors && !dashboardForm.controls['destinationIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
+		        </div>
 		</div>
 		<div class="col-md-2">
 			<select class="form-control" formControlName="accessType">

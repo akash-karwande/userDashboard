@@ -18,8 +18,8 @@ export class DashboardComponent implements OnInit {
 
   	this.dashboardForm = this.fb.group({
             protocol: ['', Validators.compose([Validators.required])],
-            sourceIP: ['', Validators.compose([Validators.required, Validators.pattern('\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b')])],
-            destinationIP: ['', Validators.compose([Validators.required, Validators.pattern('\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b')])],
+            sourceIP: ['', Validators.compose([Validators.required, Validators.pattern('^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$')])],
+            destinationIP: ['', Validators.compose([Validators.required, Validators.pattern('^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$')])],
             accessType: ['', Validators.compose([Validators.required])],
             id: ['', Validators.compose([Validators.required])]
   });

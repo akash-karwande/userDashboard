@@ -1,0 +1,13 @@
+.container.col-md-6 {
+	background-color: #fff;
+	position: fixed;
+	top: 15%;
+	left: 33%;
+	padding: 36px 36px 33px 67px;
+	width: 30%;
+	border-radius: 11%;
+}
+.red {
+	color: red;
+	font-size: 12px;
+}

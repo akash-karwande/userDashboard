@@ -1,0 +1,37 @@
+<div class="container col-md-6">
+	<h2>Add More Rules</h2>
+	<div class="row col-md-12">
+		<form [formGroup]="dashboardForm">
+			<div class="form-control">
+				<input class="form-control" placeholder="serial no" formControlName="id"/>
+			</div>
+			<div class="form-control">
+				<select class="form-control" formControlName="protocol">
+			  		<option value="" disabled selected>None</option>
+			 	 	<option value="IP">IP</option>
+			  		<option value="TCP">TCP</option>
+			  		<option value="HTTP">HTTP</option>
+				</select>
+			</div>
+			<div class="form-control">
+				<input class="form-control" type="text" placeholder="Enter Source IP" formControlName="sourceIP">
+				<div *ngIf="dashboardForm.controls['sourceIP'].errors && !dashboardForm.controls['sourceIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
+		        </div>
+			</div>
+			<div class="form-control">
+				<input class="form-control" type="text" placeholder="Enter Destination IP" formControlName="destinationIP">
+				<div *ngIf="dashboardForm.controls['destinationIP'].errors && !dashboardForm.controls['destinationIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
+		        </div>
+			</div>
+			<div class="form-control">
+				<select class="form-control" formControlName="accessType">
+			  		<option value="" disabled selected>None</option>
+			  		<option value="Permit">Permit</option>
+			  		<option value="Denied">Denied</option>
+			  		<option value="All">All</option>
+				</select>
+			</div>
+			<button (click)="goBack()" class="btn btn-primary form-control" type="submit">Add</button>
+		</form>
+	</div>
+</div>
