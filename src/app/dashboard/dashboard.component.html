@@ -51,53 +51,51 @@
 	<div class="row two2" *ngFor="let locals of local">
 		<form [formGroup]="dashboardForm">
 		<div class="col-md-2">
-			<input class="form-control" placeholder="Serial No." formControlName="id"/>
+			<input class="form-control" placeholder="Serial No." value="{{locals.id}}" formControlName="id"/>
 		</div>
 		<div class="col-md-2">
 			<select class="form-control" formControlName="protocol">
-			  <option value="" disabled selected>None</option>
-			  <option value="IP">IP</option>
+			  <option selected>{{locals.protocol}}</option>
+			  <!-- <option value="IP">IP</option>
 			  <option value="TCP">TCP</option>
-			  <option value="HTTP">HTTP</option>
+			  <option value="HTTP">HTTP</option> -->
 			</select>
 		</div>
 		<div class="col-md-2">
-			<input class="form-control" type="text" placeholder="Enter Source IP" formControlName="sourceIP">
+			<input class="form-control" type="text" placeholder="Enter Source IP" value="{{locals.sourceIP}}" formControlName="sourceIP">
 				<div *ngIf="dashboardForm.controls['sourceIP'].errors && !dashboardForm.controls['sourceIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
 		        </div>
 		</div>
 		<div class="col-md-2">
-			<input type="text" class="form-control" placeholder="Enter Destination IP" formControlName="destinationIP">
+			<input type="text" class="form-control" placeholder="Enter Destination IP" formControlName="destinationIP" value="{{locals.destinationIP}}">
 				<div *ngIf="dashboardForm.controls['destinationIP'].errors && !dashboardForm.controls['destinationIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
 		        </div>
 		</div>
 		<div class="col-md-2">
 			<select class="form-control" formControlName="accessType">
-			  <option value="" disabled selected>None</option>
-			  <option value="Permit">Permit</option>
+			  <option selected>{{locals.accessType}}</option>
+			  <!-- <option value="Permit">Permit</option>
 			  <option value="Denied">Denied</option>
-			  <option value="All">All</option>
+			  <option value="All">All</option> -->
 			</select>
 		</div>
 		<div class="col-md-2">
 			<i (click)="onDelete()" class="fa fa-trash red"></i>
 		</div>
 	</form>
-	</div>
-			<p>{{local.protocol}}</p>
-
+	</div><br>
 </div>
 
 
 
 <nav class="page">
   <ul class="pagination justify-content-end">
-    <li class="page-item disabled">
+    <li class="page-item2">
       <a class="page-link" tabindex="-1">Previous</a>
     </li>
     <li class="page-item active"><a class="page-link">1</a></li>
-    <li class="page-item disabled"><a class="page-link">2</a></li>
-    <li class="page-item disabled"><a class="page-link">3</a></li>
+    <li class="page-item"><a class="page-link">2</a></li>
+    <li class="page-item"><a class="page-link">3</a></li>
     <li class="page-item">
       <a class="page-link">Next</a>
     </li>

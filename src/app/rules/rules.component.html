@@ -1,7 +1,7 @@
 <div class="container col-md-6">
 	<h2>Add More Rules</h2>
 	<div class="row col-md-12">
-		<form [formGroup]="dashboardForm">
+		<form [formGroup]="dashboardForm2">
 			<div class="form-control">
 				<input class="form-control" placeholder="serial no" formControlName="id"/>
 			</div>
@@ -15,12 +15,12 @@
 			</div>
 			<div class="form-control">
 				<input class="form-control" type="text" placeholder="Enter Source IP" formControlName="sourceIP">
-				<div *ngIf="dashboardForm.controls['sourceIP'].errors && !dashboardForm.controls['sourceIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
+				<div *ngIf="dashboardForm2.controls['sourceIP'].errors && !dashboardForm2.controls['sourceIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
 		        </div>
 			</div>
 			<div class="form-control">
 				<input class="form-control" type="text" placeholder="Enter Destination IP" formControlName="destinationIP">
-				<div *ngIf="dashboardForm.controls['destinationIP'].errors && !dashboardForm.controls['destinationIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
+				<div *ngIf="dashboardForm2.controls['destinationIP'].errors && !dashboardForm2.controls['destinationIP'].pristine" class="error-msg"><p class="red">invalid ip</p>
 		        </div>
 			</div>
 			<div class="form-control">
@@ -31,7 +31,7 @@
 			  		<option value="All">All</option>
 				</select>
 			</div>
-			<button [disabled]="!dashboardForm.valid" (click)="getForm()" (click)="goBack()" class="btn btn-primary form-control" type="submit">Add</button>
+			<button [disabled]="!dashboardForm2.valid" (click)="getForm()" class="btn btn-primary form-control" type="submit">Add</button>
 		</form>
 	</div>
 </div>

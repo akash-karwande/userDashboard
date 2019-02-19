@@ -15,6 +15,9 @@ nav {
 	color: #fff;
 	cursor: pointer;
 }
+h4 {
+	font-size: 23px;
+}
 
 .navbar-brand {
 	background-color: #e0e0e0;
