@@ -12,9 +12,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DashboardComponent implements OnInit {
 	private modalRef;
 	dashboardForm:FormGroup;
+  public local:any;
   constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fb:FormBuilder) {}
 
   ngOnInit() {
+    this.local = localStorage.getItem('data');
+    console.log(this.local);
 
   	this.dashboardForm = this.fb.group({
             protocol: ['', Validators.compose([Validators.required])],
@@ -39,11 +42,6 @@ export class DashboardComponent implements OnInit {
   
 }
 
-  getForm() {
-  	localStorage.setItem('data',JSON.stringify(this.dashboardForm.value));
-  		console.log(this.dashboardForm.value);
-  	
-  }
 
   onDelete() {
   	localStorage.removeItem('data');

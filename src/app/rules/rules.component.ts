@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RulesComponent implements OnInit {
 	dashboardForm:FormGroup;
+	public local:any;
 
   constructor(private router:Router, private fb:FormBuilder) { }
 
@@ -29,5 +30,12 @@ export class RulesComponent implements OnInit {
   	this.router.navigate(['dashboard']);
 
   }
+
+   getForm() {
+  	this.local= localStorage.setItem('data',JSON.stringify(this.dashboardForm.value));
+  		console.log(this.local);
+  	
+  }
+
 
 }

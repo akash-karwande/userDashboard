@@ -31,7 +31,7 @@
 			  		<option value="All">All</option>
 				</select>
 			</div>
-			<button (click)="goBack()" class="btn btn-primary form-control" type="submit">Add</button>
+			<button [disabled]="!dashboardForm.valid" (click)="getForm()" (click)="goBack()" class="btn btn-primary form-control" type="submit">Add</button>
 		</form>
 	</div>
 </div>

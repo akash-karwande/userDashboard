@@ -21,7 +21,7 @@
 			<i class="fa fa-plus-square" routerLink="rules"> Add More Rule</i>
 		</div>
 		<div class="col-md-4 center">
-			<p class="red">All Columns Mandatory</p>
+			<p class="red2">All Columns Mandatory</p>
 		</div>
 		<div class="col-md-4 pull-right">
 			<input class="grid-input" type="text" placeholder="Search Grid">
@@ -48,10 +48,10 @@
 		</div>
 	</div>
 
-	<div class="row two2">
+	<div class="row two2" *ngFor="let locals of local">
 		<form [formGroup]="dashboardForm">
 		<div class="col-md-2">
-			<input class="form-control" placeholder="1" formControlName="id"/>
+			<input class="form-control" placeholder="Serial No." formControlName="id"/>
 		</div>
 		<div class="col-md-2">
 			<select class="form-control" formControlName="protocol">
@@ -80,36 +80,12 @@
 			</select>
 		</div>
 		<div class="col-md-2">
-			<i (click)="getForm()" class="green">Add</i><i (click)="onDelete()" class="fa fa-trash red"></i>
+			<i (click)="onDelete()" class="fa fa-trash red"></i>
 		</div>
 	</form>
 	</div>
-	<div class="row two2">
-		<form [formGroup]="dashboardForm">
-		<div class="col-md-2">
-			<input class="form-control" placeholder="{{dashboardForm.value.id}}" formControlName="id"/>
-		</div>
-		<div class="col-md-2">
-			<select class="form-control" formControlName="protocol">
-			  <option value="" selected>{{dashboardForm.value.protocol}}</option>
-			</select>
-		</div>
-		<div class="col-md-2">
-			<input class="form-control" type="text" placeholder="{{dashboardForm.value.sourceIP}}" formControlName="sourceIP">
-		</div>
-		<div class="col-md-2">
-			<input type="text" class="form-control" placeholder="{{dashboardForm.value.destinationIP}}" formControlName="destinationIP">
-		</div>
-		<div class="col-md-2">
-			<select class="form-control" formControlName="accessType">
-			  <option value="" disabled selected>{{dashboardForm.value.accessType}}</option>
-			</select>
-		</div>
-		<div class="col-md-2">
-			<i (click)="getForm()" class="green">Add</i><i (click)="onDelete()" class="fa fa-trash red"></i>
-		</div>
-	</form>
-	</div>
+			<p>{{local.protocol}}</p>
+
 </div>
 
 

@@ -89,7 +89,7 @@ input::placeholder {
 	text-align: center;
 }
 
-.red {
+.red2 {
 	color: red;
 }
 
@@ -126,4 +126,9 @@ form {
 	left: 80%;
 	cursor: pointer;
 
+}
+.red {
+	color: red;
+	font-size: 12px;
+	text-align: center;
 }
